@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layout/head.ejs') %>
+  <body>
+    <%- include('../layout/header.ejs') %>
+    <main class="cards">
+      <div class="card">
+        <h1>Covid19 Statistic for: <%= covid.country %></h1>
+        <p>Total Confirmed: <%= covid.confirmed %></p>
+        <p>Total Deaths: <%= covid.deaths %></p>
+        <p>Total Recovered: <%= covid.recovered %></p>
+        <p>Date: <%= covid.date %></p>
+        <form action="/detail/<%= covid.id %>?_method=Delete" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+    </main>
+
+    <%- include('../layout/footer.ejs') %>
+  </body>
+</html>

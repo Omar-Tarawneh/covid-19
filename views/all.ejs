@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layout/head.ejs') %>
+  <body>
+    <%- include('./layout/header.ejs') %>
+
+    <main class="cards">
+      <% covid.forEach(value => { %>
+      <div class="card">
+        <h1>Country: <%= value.country %></h1>
+        <p>Total Confirmed: <%= value.confirmed %></p>
+        <p>Total Deaths: <%= value.deaths %></p>
+        <p>Total Recovered: <%= value.recovered %></p>
+        <p>Date: <%= value.date %></p>
+        <form action="/add" method="POST">
+          <input
+            hidden
+            type="text"
+            value="<%= value.country %> "
+            name="country"
+            id="country"
+          />
+          <input
+            hidden
+            type="text"
+            value="<%= value.confirmed %> "
+            name="confirmed"
+            id="confirmed"
+          />
+          <input
+            hidden
+            type="text"
+            value="<%= value.deaths %> "
+            name="deaths"
+            id="deaths"
+          />
+          <input
+            hidden
+            type="text"
+            value="<%= value.recovered %> "
+            name="recovered"
+            id="recovered"
+          />
+          <input
+            hidden
+            type="text"
+            value="<%= value.date %> "
+            name="date"
+            id="date"
+          />
+          <button type="submit">add-to-my-records</button>
+        </form>
+      </div>
+      <% }) %>
+    </main>
+
+    <%- include('./layout/footer.ejs') %>
+  </body>
+</html>

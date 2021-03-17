@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Akaya Telivigala', cursive;
+}
+/* header */
+header {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  background-color: rgb(19, 19, 100);
+}
+#highlight {
+  color: burlywood;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  padding: 10px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+header a:hover {
+  color: burlywood;
+  font-weight: bolder;
+}
+
+/* main */
+#home {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-data {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+#home-data p {
+  padding: 11px;
+  width: 33%;
+  margin: 17px;
+  background-color: burlywood;
+  height: 33px;
+  border-radius: 40px;
+}
+
+/* all countries */
+
+.cards {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 35px;
+}
+
+.card {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+/* footer */
+footer {
+  height: 70px;
+  background-color: rgb(19, 19, 100);
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 70px;
+}
