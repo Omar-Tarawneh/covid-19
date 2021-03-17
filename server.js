@@ -8,7 +8,11 @@ const override = require('method-override');
 require('dotenv').config();
 
 const app = express();
-const client = new pg.Client(process.env.DATABASE_URL);
+// const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false },
+});
 const PORT = process.env.PORT;
 
 app.use(cors());
